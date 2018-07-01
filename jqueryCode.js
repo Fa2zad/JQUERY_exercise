@@ -40,6 +40,8 @@ $(document).ready(function() {
     });
     
 
-    $("p ~ p").css("border", "1px solid red");
+    $("p ~ p").css("border", "1px solid red"); //پارگراف هایی که بعد از یک پاراگراف آمده اند و در یک سطح هستند
+    $("p + p ~ p").css("background", "pink"); //پاراگراف هایی که به از دو پارگراف پشت سر هم در یک سطح هستند
+
 
 });
