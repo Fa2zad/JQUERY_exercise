@@ -33,7 +33,7 @@ $(document).ready(function() {
             marginLeft: "50%",
             marginTop: "15%",
             height: 100,
-            backgroundColor: '#ff0000',
+            backgroundColor: "red",
             borderRadius: "0"
         }, 200);
 
