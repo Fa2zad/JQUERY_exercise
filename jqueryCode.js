@@ -43,5 +43,12 @@ $(document).ready(function() {
     $("p ~ p").css("border", "1px solid red"); //پارگراف هایی که بعد از یک پاراگراف آمده اند و در یک سطح هستند
     $("p + p ~ p").css("background", "pink"); //پاراگراف هایی که به از دو پارگراف پشت سر هم در یک سطح هستند
 
+    $("div p:first-child").css("border", "1px solid blue");
+    $("div p:last-of-type").css("border", "1px solid blue");
+    $("div p:nth-child(3)").css("border", "1px solid green");
+    $("div p:nth-child(2n)").css("border", "2px solid orange");
+
+
+
 
 });
