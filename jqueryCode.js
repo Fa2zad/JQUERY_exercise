@@ -39,4 +39,7 @@ $(document).ready(function() {
 
     });
     
+
+    $("p ~ p").css("border", "1px solid red");
+
 });
