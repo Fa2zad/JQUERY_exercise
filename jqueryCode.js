@@ -48,6 +48,8 @@ $(document).ready(function() {
     $("div p:nth-child(3)").css("border", "1px solid green");
     $("div p:nth-child(2n)").css("border", "2px solid orange");
 
+    $("ul").children().css("border", "1px solid blue");
+
 
 
 
