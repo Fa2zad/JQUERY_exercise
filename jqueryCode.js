@@ -53,6 +53,13 @@ $(document).ready(function() {
     $("li").wrap('<div style="background: pink" />');
     $("li").wrapAll('<div style="border: 1px solid lime" />');
 
+    $("p").on("mouseover mouseleave", function(){
+        $(this).toggleClass("highrlighted");
+    });
 
+    $("p").on("click", function(){
+        $("p").off("mouseover mouseleave");
+        $(this).removeClass("highrlighted");
+    });
 
 });
