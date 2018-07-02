@@ -50,6 +50,8 @@ $(document).ready(function() {
 
     $("ul").children().css("border", "1px solid blue");
 
+    $("li").wrap('<div style="background: pink" />');
+    $("li").wrapAll('<div style="border: 1px solid lime" />');
 
 
 
