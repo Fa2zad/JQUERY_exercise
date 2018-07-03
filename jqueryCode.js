@@ -65,7 +65,7 @@ $(document).ready(function() {
 
     $("#ajaxLoadButton").click(function(){
         $("#ajaxLoad").html(laodContent());        
-        //alert(laodContent());
+        alert(laodContent());
     });
     
     function laodContent() {
@@ -74,7 +74,7 @@ $(document).ready(function() {
         $.ajax({
         url:"text.txt",
         type: "GET",
-        async: false,  
+        async: false,  //chrome problem
         dataType: "text",
         success:function(data) {
          result = data; 
