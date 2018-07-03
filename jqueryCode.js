@@ -62,4 +62,26 @@ $(document).ready(function() {
         $(this).removeClass("highrlighted");
     });
 
+
+    $("#ajaxLoadButton").click(function(){
+        $("#ajaxLoad").html(laodContent());        
+        //alert(laodContent());
+    });
+    
+    function laodContent() {
+
+        var result="";
+        $.ajax({
+        url:"text.txt",
+        type: "GET",
+        async: false,  
+        dataType: "text",
+        success:function(data) {
+         result = data; 
+            }
+        });
+        return result;
+    }
+    
+
 });

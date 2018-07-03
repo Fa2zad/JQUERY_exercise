@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>jquery</title>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="http://code.jquery.com/color/jquery.color-2.1.2.min.js"></script>
@@ -15,9 +15,20 @@
              background: gray;
              text-shadow: 0px 0px 10px black;
          }
+         
+        .ajax-load__container p{
+            border: 3px dashed gray;
+        }
     </style>
 </head>
 <body>
+
+    <section class="ajax-load__container">
+        <p id="ajaxLoad">Paragragh with ajax</p>
+        <input type="button" value="load" id="ajaxLoadButton" />
+    </section>
+    
+    <script src="jqueryCode.js"></script>
 
     <p>paragragh 1</p>
     <p>paragragh 2</p>
@@ -45,7 +56,7 @@
             <li>List Item 5</li>
         </ul>
     </section>
+
     
-    <script src="jqueryCode.js"></script>
 </body>
 </html>
