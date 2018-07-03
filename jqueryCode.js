@@ -82,6 +82,26 @@ $(document).ready(function() {
         });
         return result;
     }
+
+    function laodContent2() {//Chrome doesn't like AJAX from local files
+        $.ajax({
+            url: "text.html",
+            type: "GET",
+            async: true,
+            cache: false,
+            dataType: "text",
+
+            //contentType: "application/json; charset=utf-8",
+            //data: {text: "reserveLock" },
+            //dataType: "json",
+            success: function (data, text) {
+                $("#jqueryGet__container p").html(data);
+            },
+            error: function (xhr, status, error) {
+                alert(xhr + status + error);
+            }
+        });
+    }
     
 
 });

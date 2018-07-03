@@ -1,0 +1,89 @@
+<!DOCUMENT html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title />
+</head>
+<body>
+    <section id="jqueryGet__container">
+        <p>Default data.</p>
+        <button>Get data from text.txt</button>
+    </section>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+    
+        $(document).ready(function () {
+
+            $("#jqueryGet__container button").click(function () {
+
+
+                //getData();
+                //alert("load");
+                // $.get({
+                //     url: "text.html",
+                //     function( data ) {
+                //     alert(data);
+
+                //     return data;
+                // }});
+
+
+
+                $.ajax({
+                    url: "text.txt",
+                    type: "GET",
+                    async: true,
+                    cache: false,
+                    dataType: "text",
+
+                    //contentType: "application/json; charset=utf-8",
+                    //data: {text: "reserveLock" },
+                    //dataType: "json",
+                    success: function (data, text) {
+                        $("#jqueryGet__container p").html(data);
+                    },
+                    error: function (xhr, status, error) {
+                        alert(xhr + status + error);
+                    }
+                });
+                
+            });
+
+            //function getData() {
+
+                //res = $.get("text.txt", XPathResult);
+
+
+               
+
+            //}
+
+                // $.ajax({
+                //     url: "text.html",
+                //     type: "GET",
+                //     //async: true,
+                //     cache: false,
+                //     dataType: "text",
+
+                //     //contentType: "application/json; charset=utf-8",
+                //     //data: {ops: "reserveLock" },
+                //     //dataType: "json",
+                //     success: function (text) {
+                //         $("#jqueryGet__container p").html(text);
+                //     },
+                //     error: function (xhr, status, error) {
+                //         alert(xhr + status + error);
+                //     }
+                // });
+
+
+        });
+
+    </script>
+</body>
+</html>
