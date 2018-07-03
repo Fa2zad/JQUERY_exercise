@@ -1,0 +1,40 @@
+<!DOCUMENT html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title />
+</head>
+<body>
+    <section id="jqueryLoad__container">
+        <p>Default data.</p>
+        <button id="jqueryLoadAll">Load data from text.html</button>
+        <button id="jqueryLoadSpan">Load #span1 from text.html </button>
+    </section>
+
+    
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+    
+        $(document).ready(function () {
+
+            $("#jqueryLoad__container button#jqueryLoadAll").click(function () {
+
+                $("#jqueryLoad__container p").load("text.html");
+
+            });
+
+            $("#jqueryLoad__container button#jqueryLoadSpan").click(function () {
+
+                $("#jqueryLoad__container p").load("text.html #span1");//jqery selectors like span:last and etc.
+
+            });
+        });
+
+    </script>
+</body>
+</html>
