@@ -1,0 +1,47 @@
+<!DOCUMENT html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title />
+</head>
+<body>
+    <section id="jqueryGetJSON__container">
+        <p>Default data.</p>
+        <button id="jqueryGetJSON">get data from news.json</button>
+        <!-- <button id="jqueryLoadSpan">Load #span1 from text.html </button> -->
+    </section>
+
+    
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+    
+        $(document).ready(function () {
+
+            $("#jqueryGetJSON__container button#jqueryGetJSON").click(function () {
+
+                $.getJSON("news.json", successFn);
+
+            });
+
+        });
+
+        function successFn(result) {
+                    $.each(result.newsStories, function(i, item){
+
+                        var newDiv = $('<div class="news" >');
+                        newDiv.append("<h2>" + item.title + "</h2>");
+                        newDiv.append("<p>" + item.content + "</p>");
+
+                        $("#jqueryGetJSON__container > p").append(newDiv);
+
+                    });
+                }
+
+    </script>
+</body>
+</html>

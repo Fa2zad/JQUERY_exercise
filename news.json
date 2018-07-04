@@ -1,0 +1,15 @@
+{
+    "nameOfJSON" : [
+        {"parametr1": "value1", "paramert2": "value2"},
+        {},
+        {}
+    ],
+
+
+    "newsStories" : [
+        {"title": "News title 1", "content": "News content 1 ..."},
+        {"title": "News title 2", "content": "News content 2 ..."},
+        {"title": "News title 3", "content": "News content 3 ..."}
+    ]
+}
+
